@@ -587,5 +587,149 @@ int main()
  return 0;
 }
 
+-------------------------Theory---------------------------
 
 
+###################Bisection Method Algorithm##############
+Follow the below procedure to get the solution for the continuous function:
+
+For any continuous function f(x),
+
+Find two points, say a and b such that a < b and f(a)* f(b) < 0
+Find the midpoint of a and b, say “t”
+t is the root of the given function if f(t) = 0; else follow the next step
+Divide the interval [a, b] – If f(t)*f(a) <0, there exist a root between t and a
+– else if f(t) *f (b) < 0, there exist a root between t and b
+Repeat above three steps until f(t) = 0.
+The bisection method is an approximation method to find the roots of the given equation by repeatedly dividing the interval. This method will divide the interval until the resulting interval is found, which is extremely small.
+
+
+####################secant##########################
+The secant method is a root-finding procedure in numerical analysis that uses a series of roots of secant lines to better approximate a root of a function 
+
+Secant Method Steps
+The secant method procedures are given below using equation (1).
+
+Step 1: Initialization
+
+x0 and x1 of α are taken as initial guesses.
+
+Step 2: Iteration
+
+In the case of n = 1, 2, 3, …,
+Xn+1 = Xn - f(Xn).(Xn -Xn-1)/(F(Xn) - F(Xn-1))
+until a specific criterion for termination has been met (i.e., The desired accuracy of the answer or the maximum number of iterations has been attained).
+
+##################### Newton Dividend #########################
+Interpolation is an estimation of a value within two known values in a sequence of values. Newton’s divided difference interpolation formula is an interpolation technique used when the interval difference is not same for all sequence of values. Suppose f(x0), f(x1), f(x2)………f(xn) be the (n+1) values of the function y=f(x) corresponding to the arguments x=x0, x1, x2…xn, where interval differences are not same Then the first divided difference is given by
+f[Xo,X1] = (F(X1) -F(Xo))/(X1-Xo)
+
+
+###################### Newton Rapson ##########################
+The Newton Raphson Method is referred to as one of the most commonly used techniques for finding the roots of given equations. It can be efficiently generalised to find solutions to a system of equations
+
+Newton Raphson Method Formula
+Let x0 be the approximate root of f(x) = 0 and let x1 = x0 + h be the correct root. Then f(x1) = 0
+
+⇒ f(x0 + h) = 0….(1)
+
+By expanding the above equation using Taylor’s theorem, we get:
+
+f(x0) + hf1(x0) + … = 0
+
+⇒ h = -f(x0) /f’(x0)
+
+Therefore, x1 = x0 – f(x0)/ f’(x0)
+
+Now, x1 is the better approximation than x0.
+
+Similarly, the successive approximations x2, x3, …., xn+1 are given by
+Xn+1 = Xn - f(Xn)/f'(Xn)
+ 
+ 
+This is called Newton Raphson formula.
+
+############################################# Newton forward and backward ###############
+
+Interpolation is the technique of estimating the value of a function for any intermediate value of the independent variable, while the process of computing the value of the function outside the given range is called extrapolation.
+
+
+Forward Differences: The differences y1 – y0, y2 – y1, y3 – y2, ……, yn – yn–1 when denoted by dy0, dy1, dy2, ……, dyn–1 are respectively, called the first forward differences. Thus, the first forward differences are : 
+del Yr = Yr+1 - Yr
+
+interpolation formula
+f(a+hu) = f(a) + u del f(a) + u(u+1)/2! del^2 f(a) +.........
+where u = ( x – a ) / h
+
+
+############################################ LEAST SQuare Method###########################
+The least square method is the process of finding the best-fitting curve or line of best fit for a set of data points by reducing the sum of the squares of the offsets (residual part) of the points from the curve. During the process of finding the relation between two variables, the trend of outcomes are estimated quantitatively. This process is termed as regression analysis. The method of curve fitting is an approach to regression analysis. This method of fitting equations which approximates the curves to given raw data is the least squares.
+
+Suppose when we have to determine the equation of line of best fit for the given data, then we first use the following formula.
+
+The equation of least square line is given by Y = a + bX
+
+Normal equation for ‘a’: 
+
+∑Y = na + b∑X
+
+Normal equation for ‘b’: 
+
+∑XY = a∑X + b∑X2
+
+Solving these two normal equations we can get the required trend line equation.
+
+Thus, we can get the line of best fit with formula y = ax + b
+
+
+
+################################################### trapezidal ######################################################
+Trapezoidal Rule is a rule that evaluates the area under the curves by dividing the total area into smaller trapezoids rather than using rectangles. This integration works by approximating the region under the graph of a function as a trapezoid, and it calculates the area. This rule takes the average of the left and the right sum.
+
+Trapezoidal Rule Formula
+Let f(x) be a continuous function on the interval [a, b]. Now divide the intervals [a, b] into n equal subintervals with each of width,
+
+Δx = (b-a)/n, Such that a = x0 < x1< x2< x3<…..<xn = b
+
+Then the Trapezoidal Rule formula for area approximating the definite integral ∫ab f(x)dx is given by:
+
+ [b ,a]S f(x)dx or Tn = del X /2 [f(Xo) + 2f(x1) + 2f(x2) +....+F(Xn)]
+ 
+
+Where, xi = a+iΔx
+
+If n →∞, R.H.S of the expression approaches the definite integral ∫ab f(x)dx.
+####################################################simpson 1/3 #####################################################
+Simpson’s rule is one of the numerical methods which is used to evaluate the definite integral. Usually, to find the definite integral, we use the fundamental theorem of calculus, where we have to apply the antiderivative techniques of integration.
+
+Simpson’s 1/3rd rule is an extension of the trapezoidal rule in which the integrand is approximated by a second-order polynomial. Simpson rule can be derived from the various way using Newton’s divided difference polynomial,  Lagrange polynomial and the method of coefficients. Simpson’s 1/3 rule is defined by:
+∫ab f(x) dx = h/3 [(y0 + yn) + 4(y1 + y3 + y5 + …. + yn-1) + 2(y2 + y4 + y6 + ….. + yn-2)]
+
+
+################################################### gaus jacobi and sideal #####################################################
+
+Iterative methods Jacobi and Gauss-Seidel in numerical analysis are based on the idea of successive approximations. This iterative method begins with one or two initial approximations of the roots, with a sequence of approximations x1, x2, x3, …, xk, …, as k → ∞, this sequence of roots converges to exact root 𝛼. For a system of equations Ax = B, we begin with an initial approximation of solution vector x = xo, by which we get a sequence of solution vector x1, x2, …, xk, … as k → ∞, this sequence converges to the solution x = A– 1B.
+
+The general iterative formulas can be given as:
+
+x k + 1 = Hxk ; k = 1, 2, 3, …
+
+Where xk + 1 and xk are approximations for the exact root of Ax = B at (k + 1)th and kth iterations. H is an iteration matrix that depends on A and B.
+
+
+-----------------------------------jacobi-------------------------
+To find the solution to this system of equations Ax = B, we assume that the system of equations have a unique solution and there is no zero entry among the diagonal or pivot elements of the coefficient matrix A.
+
+Now, we shall begin to solve equation 1 for x1, equation 2 for x2 and so on equation n for xn, we get
+
+x1 = 1/a11 [b1 – a12x2 – a13x3 – … – a1nxn]
+
+x2 = 1/a22 [b2 – a21x1 – a23x3 – … – a2nxn]
+
+⠇
+
+xn = 1/ann [bn – an1x1 – an3x3 – … – an n – 1xn – 1]
+
+By making an initial guess for the solution x(0) = (x1(0), x2(0), …, xn(0)) and substituting these values only to the right hand side of the above equations we get first approximations x(1) = (x1(1), x2(1), …, xn(1)). Continuing this process iteratively we get sequence of approximations {x(k)} such that as k → ∞, this sequence converges to exact solution of the system of equation up to a given error tolerance.
+-----------------------------------sideal-----------------------------------
+In Jacobi method the value of the variables is not modified until next iteration, whereas in Gauss-Seidel method the value of the variables are modified as soon as new value is evaluated. For instance, in Jacobi method the value of xi(k) is not modified until the (k + 1)th iteration but in Gauss-Seidel method the value of xi(k) changes in in kth iteration only.
